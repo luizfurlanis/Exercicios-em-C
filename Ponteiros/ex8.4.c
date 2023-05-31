@@ -16,14 +16,30 @@ int main(){
 
     pritnf("Ano: ");
     scanf("%d", &ano);
+
+    decompoeData(diaAno, ano, &mes, &dia);
+
+    printf("O dia %d do ano %d cai no dia %d de mes %d", dia, ano, mes, diaAno);
+    return 0;
 }
 
 void decompoeData(int diaDoAno, int ano, int *mes, int *dia){
 
+    int array[12] + {31,28,31,30,31,30,31,31,30,31,30,31};
+
     if(anoBissexto){
-        if()
+        array[1] = 29;
     }
 
+    *dia = diaDoAno;
+
+    for(int i = 0; i < 12; i++){
+        if(diaDoAno > array[i]){
+            *mes++;
+            diaDoAno -= array[i]; 
+        }
+    }
+    
 }
 
 bool anoBissexto(int ano);{
