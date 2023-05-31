@@ -18,7 +18,7 @@ int main(){
             }
         }
     }
-    pInterno( &a, &b, &pi, 5);
+    pInterno( a, b, pi, 5);
     for(int i = 0; i < 5; i++){
         printf("%.2lf x %.2lf = %.2lf\n", a[i], b[i], pi[i]);
     }

@@ -14,7 +14,7 @@ int main(){
     printf("Buscar por: ");
     scanf("%d", &num);
 
-    printf("O valor %d foi encontrado na posicao %d.", num, buscar( &a, num, 10));
+    printf("O valor %d foi encontrado na posicao %d.", num, buscar( a, num, 10));
     return 0;
 }
 
