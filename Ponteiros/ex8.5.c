@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int buscar(const int *a, int n);
+int buscar(const int *a, int n, int chave);
 int main(){
 
     int a[10];
@@ -14,13 +14,13 @@ int main(){
     printf("Buscar por: ");
     scanf("%d", &num);
 
-    printf("O valor %d foi encontrado na posicao %d.", num, buscar( &a, num));
+    printf("O valor %d foi encontrado na posicao %d.", num, buscar( &a, num, 10));
     return 0;
 }
 
-int buscar(const int *a, int n){
+int buscar(const int *a, int n, int chave){
 
-    for(int i = 0; i < 10; i++){
+    for(int i = 0; i < chave; i++){
         if(n == a[i]){
             return i;
         }
