@@ -27,6 +27,7 @@ int main(){
 void decompoeData(int diaDoAno, int ano, int *mes, int *dia){
 
     int array[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
+    *mes = 0;
 
     if(anoBissexto){
         array[1] = 29;
