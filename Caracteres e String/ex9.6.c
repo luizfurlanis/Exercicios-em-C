@@ -9,7 +9,7 @@ int main(){
     printf("Nome: ");
     scanf("%s", str);
 
-    for(i = 0; i < n; i++){
+    for(int i = 0; i < n; i++){
         printf("%s\n", str);
     }
 }

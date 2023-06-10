@@ -9,7 +9,7 @@ int main(){
     for(int i = 1; i < 6; i++){
         for(int k = 1; k < 3; k++){
             printf("Par %d, palavra %d: ", i, k);
-            scanf("%s" strpar);
+            scanf("%s", strpar);
         }
     }
 }
