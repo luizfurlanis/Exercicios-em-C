@@ -8,6 +8,6 @@ int main(){
     printf("String: ");
     scanf("%s", string);
 
-    printf("%c, %c, %c, %c.", string[0]), string[1], string[2], string[3];
+    printf("%c, %c, %c, %c.", string[0], string[1], string[2], string[3]);
     
 }
