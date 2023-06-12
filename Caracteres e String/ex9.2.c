@@ -4,9 +4,14 @@
 
 int main (){
     char str[50];
+    int soma = 0;
 
-    printf("Sentença: ");
+    printf("Sentenca: ");
     scanf("%s", str);
 
-    printf("Primeiro caractere: %c\nUltimo caractere: %c\nNumero de caracteres: %d", str[0], str);
+    for(int i = str[0]; str[i] != '\0'; i++){
+        soma++;
+    }
+
+    printf("Primeiro caractere: %c\nUltimo caractere: %c\nNumero de caracteres: %d", str[0], str[soma], soma);
 }
