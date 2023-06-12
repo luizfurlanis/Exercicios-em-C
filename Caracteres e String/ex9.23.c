@@ -7,7 +7,7 @@ int main (){
     char str[100];
 
     printf("String: ");
-    scanf("%[^\n]", str);
+    fgets(str,100,stdin);
 
     imprimirCaixa( str );
 

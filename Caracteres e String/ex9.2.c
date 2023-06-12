@@ -7,7 +7,7 @@ int main (){
     int soma = 0;
 
     printf("Sentenca: ");
-    scanf("%s", str);
+    fgets(str,50,stdin);
 
     for(int i = str[0]; str[i] != '\0'; i++){
         soma++;

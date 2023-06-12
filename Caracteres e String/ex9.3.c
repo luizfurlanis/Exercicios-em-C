@@ -6,10 +6,9 @@ int main(){
     char str[40];
 
     printf("Sentença: ");
-    scanf("%c", str);
+    fgets(str,40,stdin);
 
-    for(int i = 0; str[i] != '\0'){
+    for(int i = str[0]; str[i] != '\0'; i = i + 2){
         printf("%c", str[i]);
-        i = i + 2;
     }
 }
