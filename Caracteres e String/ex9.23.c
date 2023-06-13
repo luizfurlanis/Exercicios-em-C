@@ -1,34 +1,42 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <ctype.h>
+#include <stdlib.h>
+#include <string.h>
 
-void imprimirCaixa( const char *str);
-int main (){
+void imprimirCaixa(const char *str);
+
+int main() {
     char str[100];
 
     printf("String: ");
-    gets(str);
+    fgets(str, sizeof(str), stdin);
+    str[strcspn(str, "\n")] = '\0';
 
-    imprimirCaixa( str );
+    printf("\n");
+    imprimirCaixa(str);
 
     return 0;
 }
 
-void imprimirCaixa( const char *str){
+void imprimirCaixa(const char *str) {
+    int tamanhoStr = strlen(str);
+    int larguraCaixa = tamanhoStr + 4;
 
     printf("++");
-    for(int i = 0; str[i] != '\0'; i++){
+    for (int i = 0; i < larguraCaixa - 2; i++) {
         printf("=");
     }
-    printf("==");
     printf("++\n");
 
-    printf("|| %s ||\n", str);
+    printf("|| ");
+    printf("%s", str);
+    for (int i = 0; i < larguraCaixa - tamanhoStr - 3; i++) {
+        printf(" ");
+    }
+    printf("||\n");
 
     printf("++");
-    for(int i = 0; str[i] != '\0'; i++){
+    for (int i = 0; i < larguraCaixa - 2; i++) {
         printf("=");
     }
-    printf("==");
-    printf("++");
+    printf("++\n");
 }

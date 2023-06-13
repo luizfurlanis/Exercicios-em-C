@@ -1,18 +1,15 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <ctype.h>
+#include <stdlib.h>
+#include <string.h>
 
-int main (){
-    char str[50];
-    int soma = 0;
+int main(){
+    char string[30] = "ola, como vai, tudo bem?";
+    int tamanho = strlen(string);
 
-    printf("Sentenca: ");
-    fgets(str,50,stdin);
+    printf("%s\n", string);
+    printf("Primeiro caractere: %c\n", string[0]);
+    printf("Ultimo caractere: %c\n", string[tamanho - 1]);
+    printf("Numero de caracteres: %d", tamanho);
 
-    for(int i = 0; str[i] != '\0'; i++){
-        soma++;
-    }
-    soma = soma -1;
-
-    printf("Primeiro caractere: %c\nUltimo caractere: %c\nNumero de caracteres: %d", str[0], str[soma - 1], soma);
+    return 0;
 }

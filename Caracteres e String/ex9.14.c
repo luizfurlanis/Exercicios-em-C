@@ -13,6 +13,8 @@ int main(){
     tornarMaiuscula(string);
 
     printf("%s", string);
+
+    return 0;
 }
 
 void tornarMaiuscula(char *str){

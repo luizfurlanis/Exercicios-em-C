@@ -3,20 +3,21 @@
 #include <ctype.h>
 #include <string.h>
 
-void tornarMinuscula(char *str);
-
+void tornarMaiuscula(char *str);
 int main(){
     char string[40];
 
     printf("Frase: ");
     fgets(string, 40, stdin);
 
-    tornarMinuscula(string);
+    tornarMaiuscula(string);
 
     printf("%s", string);
+
+    return 0;
 }
 
-void tornarMinuscula(char *str){
+void tornarMaiuscula(char *str){
     for(int i = 0; i < strlen(str); i++){
         str[i] = tolower(str[i]);
     }

@@ -11,8 +11,13 @@ int main(){
     for(int i = 0; str[i] != '\0'; i = i + 2){
         if(str[i] == ' '){
             printf("' ', ");
-        }else{
+        }else if(str[i+2] == '\0'){
+            printf("%c", str[i]);
+        }
+        else{
             printf("%c, ", str[i]);
         }
     }
+
+    return 0;
 }

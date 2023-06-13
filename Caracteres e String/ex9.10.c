@@ -1,16 +1,26 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <ctype.h>
-#include <string.h>
+#include <stdlib.h>
 
-int main(){
-    char str[50];
-    int n;
+int tamanho(const char* str);
+
+int main() {
+    char frase[100];
 
     printf("Frase: ");
-    gets(str);
+    fgets(frase, sizeof(frase), stdin);
 
-    n = strlen(str);
+    int tam = tamanho(frase);
+    printf("%d caractere(s)!\n", tam);
 
-    printf("%d caractere(s)", n);
+    return 0;
+}
+
+int tamanho(const char* str) {
+    int count = 0;
+
+    while (str[count] != '\0') {
+        count++;
+    }
+
+    return count-1;
 }

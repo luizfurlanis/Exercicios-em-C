@@ -1,13 +1,20 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <ctype.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main(){
-    char string[40];
+    char string[30] = "essa eh uma string";
 
-    printf("String: ");
-    scanf("%s", string);
+    printf("%s\n", string);
 
-    printf("%c, %c, %c, %c.", string[0], string[1], string[2], string[3]);
-    
+    for(int i = 0; i < 4; i++){
+        if(i == 3){
+            printf("%c.", string[i]);
+        }
+        else{
+            printf("%c, ", string[i]);
+        }
+    }
+
+    return 0;
 }

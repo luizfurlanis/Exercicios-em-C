@@ -1,23 +1,30 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <ctype.h>
+#include <stdlib.h>
 #include <string.h>
 
-int main(){
-    char str[50];
-    char invstr[50];
-    char temp;
-    int tam;
+void inverter(char* destino, const char* origem);
+
+int main() {
+    char entrada[41];
+    char saida[41];
 
     printf("String: ");
-    fgets(str,50,stdin);
-    str[strlen(str) - 1] = '\0';
+    fgets(entrada, sizeof(entrada), stdin);
 
-    tam = strlen(str);
+    entrada[strcspn(entrada, "\n")] = '\0';
 
-    for(int i = 0; str[i] != '\0'; i++){
-        invstr[tam - i] = str[i];
+    inverter(saida, entrada);
+    printf("Invertida: %s", saida);
+
+    return 0;
+}
+
+void inverter(char* destino, const char* origem) {
+    int tamanho = strlen(origem);
+
+    for (int i = 0; i < tamanho; i++) {
+        destino[i] = origem[tamanho - i - 1];
     }
 
-    printf("%s", invstr);
+    destino[tamanho] = '\0';
 }

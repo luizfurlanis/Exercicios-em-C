@@ -15,4 +15,6 @@ int main(){
     for(int i = 0; i < n; i++){
         printf("%s\n", str);
     }
+
+    return 0;
 }
