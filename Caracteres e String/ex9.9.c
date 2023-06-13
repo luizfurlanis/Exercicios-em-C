@@ -10,7 +10,8 @@ int main(){
     int tam;
 
     printf("String: ");
-    gets(str);
+    fgets(str,50,stdin);
+    str[strlen(str) - 1] = '\0';
 
     tam = strlen(str);
 

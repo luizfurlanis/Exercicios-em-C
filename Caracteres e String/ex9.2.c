@@ -12,6 +12,7 @@ int main (){
     for(int i = 0; str[i] != '\0'; i++){
         soma++;
     }
+    soma = soma -1;
 
-    printf("Primeiro caractere: %c\nUltimo caractere: %c\nNumero de caracteres: %d", str[0], str[soma - 2], soma);
+    printf("Primeiro caractere: %c\nUltimo caractere: %c\nNumero de caracteres: %d", str[0], str[soma - 1], soma);
 }
