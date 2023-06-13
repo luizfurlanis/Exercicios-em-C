@@ -7,7 +7,7 @@ int main (){
     char str[100];
 
     printf("String: ");
-    fgets(str,100,stdin);
+    gets(str);
 
     imprimirCaixa( str );
 
@@ -17,16 +17,18 @@ int main (){
 void imprimirCaixa( const char *str){
 
     printf("++");
-    for(int i = str[0]; str[i] != '\0'; i++){
+    for(int i = 0; str[i] != '\0'; i++){
         printf("=");
     }
+    printf("==");
     printf("++\n");
 
     printf("|| %s ||\n", str);
 
     printf("++");
-    for(int i = str[0]; str[i] != '\0'; i++){
+    for(int i = 0; str[i] != '\0'; i++){
         printf("=");
     }
+    printf("==");
     printf("++");
 }
