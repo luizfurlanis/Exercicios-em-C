@@ -7,9 +7,11 @@ int main(){
     char strpar[10];
 
     for(int i = 1; i < 6; i++){
-        for(int k = 1; k < 3; k++){
-            printf("Par %d, palavra %d: ", i, k);
-            scanf("%s", strpar);
-        }
+        printf("Par %d, palavra 1: ", i);
+        gets(str);
+        printf("Par %d, palavra 2: ", i);
+        gets(strpar);
     }
+
+    
 }

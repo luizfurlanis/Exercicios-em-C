@@ -6,7 +6,7 @@ int main (){
     char str[10];
 
     printf("Nome: ");
-    scanf("%s", str);
+    gets(str);
 
     for(int i = 0; i < 5; i++){
         printf("%s\n", str);

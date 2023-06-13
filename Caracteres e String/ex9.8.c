@@ -16,5 +16,7 @@ int main (){
     printf("String 3: ");
     scanf("%s", str3);
 
+    
+
     printf("%s, %s e %s", str1, str2, str3);
 }

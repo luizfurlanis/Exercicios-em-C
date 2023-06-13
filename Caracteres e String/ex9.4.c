@@ -6,10 +6,13 @@ int main(){
     char str[40];
 
     printf("Sentenca: ");
-    scanf("%c", str);
+    gets(str);
 
-    for(int i = 1; str[i] != '\0';){
-        printf("%c", str[i]);
-        i = i + 2;
+    for(int i = 1; str[i] != '\0'; i = i + 2){
+        if(str[i] == ' '){
+            printf("' ', ");
+        }else{
+            printf("%c, ", str[i]);
+        }
     }
 }

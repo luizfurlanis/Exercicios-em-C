@@ -9,9 +9,9 @@ int main (){
     printf("Sentenca: ");
     fgets(str,50,stdin);
 
-    for(int i = str[0]; str[i] != '\0'; i++){
+    for(int i = 0; str[i] != '\0'; i++){
         soma++;
     }
 
-    printf("Primeiro caractere: %c\nUltimo caractere: %c\nNumero de caracteres: %d", str[0], str[soma], soma);
+    printf("Primeiro caractere: %c\nUltimo caractere: %c\nNumero de caracteres: %d", str[0], str[soma - 2], soma);
 }
